@@ -1,6 +1,6 @@
 Package: diffee
 Version: 1.0.0
-Date: 2018-03-01
+Date: 2018-03-05
 Title: Fast and Scalable Learning of Sparse Changes in High-Dimensional Gaussian Graphical Model Structure
 Authors@R: c(person("Beilun", "Wang", role = c("aut", "cre"), email = "bw4mw@virginia.edu"), person("Yanjun", "Qi", role = "aut", email = "yanjun@virginia.edu"))
 Author: Beilun Wang [aut, cre], Yanjun Qi [aut]

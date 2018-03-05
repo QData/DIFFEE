@@ -27,14 +27,12 @@ Beilun Wang, Arshdeep Sekhon, Yanjun Qi (2018). Fast and Scalable Learning of Sp
 Beilun Wang}
 
 \examples{
-\dontrun{
 ## load an example two datasets, p=100 features, and n=200 samples per dataset:
 data(exampleData)
 ##run diffee
 result = diffee(C = exampleData[[1]], D =  exampleData[[2]], 0.05)
 ## get edges list:
 net.edges(result$diffNet)
-}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
