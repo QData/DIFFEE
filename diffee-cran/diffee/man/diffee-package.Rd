@@ -12,7 +12,7 @@ This is an R implementation of Fast and Scalable Learning of Sparse Changes in H
 Package: \tab diffee\cr
 Type: \tab Package\cr
 Version: \tab 1.0.0\cr
-Date: \tab 2018-03-01\cr
+Date: \tab 2018-03-05\cr
 License: \tab GPL (>= 2)\cr
 }
 We focus on the problem of estimating the change in the dependency structures of two p-dimensional Gaussian Graphical models (GGMs). Previous studies for sparse change estimation in GGMs involve expensive and difficult non-smooth optimization. We propose a novel method, DIFFEE for estimating DIFFerential networks via an Elementary Estimator under a high-dimensional situation. DIFFEE is solved through a faster and closed form solution that enables it to work in large-scale settings. We conduct a rigorous statistical analysis  showing that surprisingly DIFFEE achieves the same asymptotic convergence rates as the state-of-the-art estimators that are much more difficult to compute. Our experimental results on multiple synthetic datasets and one real-world data about brain connectivity show strong performance improvements over baselines, as well as significant computational benefits.
@@ -27,8 +27,6 @@ Beilun Wang, Arshdeep Sekhon, Yanjun Qi (2018). Fast and Scalable Learning of Sp
 }
 \keyword{ package }
 \examples{
-\dontrun{
 data(exampleData)
 diffee(C = exampleData[[1]], D =  exampleData[[2]], 0.05)
-}
 }

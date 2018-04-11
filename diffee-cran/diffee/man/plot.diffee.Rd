@@ -40,11 +40,9 @@ Beilun Wang, Arshdeep Sekhon, Yanjun Qi (2018). Fast and Scalable Learning of Sp
   \code{\link{diffee}}
 }
 \examples{
-  \dontrun{
 data(exampleData)
 results = diffee(C = exampleData[[1]], D =  exampleData[[2]], 0.05)
 plot.diffee(results)
 plot.diffee(results, type="neighbor", index=50)
-  }
 }
 \keyword{ diffee }
