@@ -2,12 +2,18 @@
 \alias{diffee}
 \title{Fast and Scalable Learning of Sparse Changes in High-Dimensional Gaussian Graphical Model Structure}
 \usage{
-diffee(C, D, lambda = 0.05)
+diffee(C, D, lambda = 0.05, covType = "cov" , thre = "soft")
 }
 \arguments{
 \item{C}{A input matrix for the 'control' group. It can be data matrix or covariance matrix. If C is a symmetric matrix, the matrices are assumed to be covariance matrix. More details at <https://github.com/QData/DIFFEE>}
 \item{D}{A input matrix for the 'disease' group. It can be data matrix or covariance matrix. If D is a symmetric matrix, the matrices are assumed to be covariance matrix. More details at <https://github.com/QData/DIFFEE>}
 \item{lambda}{A positive number. The hyperparameter controls the sparsity level of the matrices. The \eqn{\lambda_n} in the following section: Details.}
+\item{covType}{A parameter to decide which Graphical model we choose to estimate from the input data.
+
+If covType = "cov", it means that we estimate multiple sparse Gaussian Graphical models. This option assumes that we calculate (when input X represents data directly) or use (when X elements are symmetric representing covariance matrices) the sample covariance matrices as input to the simule algorithm.
+
+If covType = "kendall", it means that we estimate multiple nonparanormal Graphical models. This option assumes that we calculate (when input X represents data directly) or use (when X elements are symmetric representing correlation matrices) the kendall's tau correlation matrices as input to the simule algorithm.}
+\item{thre}{A parameter to decide which threshold function to use for \eqn{T_v}. If thre = "soft", it means that we choose soft-threshold function as \eqn{T_v}. If thre = "hard", it means that we choose hard-threshold function as \eqn{T_v}.}
 }
 \description{
 Estimate DIFFerential networks via an Elementary

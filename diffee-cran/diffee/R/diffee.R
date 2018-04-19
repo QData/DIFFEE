@@ -1,22 +1,42 @@
+.checkInv <- function(m) class(try(solve(m),silent=T))=="matrix"
+
 .softThre <- function(x, lambda){
     result = sign(x) * pmax(abs(x)-lambda, 0)
     result
 }
 
-.backwardMap <-function(covMatrix){
-    niuList = 0.001 * (1:1000)
-    bestDet = det(.softThre(covMatrix, 0.001))
-    bestniu = 0.001
-    for (i in 1:1000){
-        if (bestDet < det(.softThre(covMatrix, niuList[i]))){
-            bestDet = det(.softThre(covMatrix, niuList[i]))
-            bestniu = niuList[i]
-        }
-    }
-    return(solve(.softThre(covMatrix, bestniu)))
+.hardThre <- function(x, lambda){
+    x[(x != diag(diag(x))) & (abs(x) < lambda)] <- 0
+    return(x)
 }
 
-diffee <- function(C, D, lambda = 0.05){
+.backwardMap <-function(covMatrix, thre = "soft"){
+    niuList = 0.001 * (0:1000) * max(covMatrix)
+    bestDet = det(.softThre(covMatrix, 0.001))
+    bestniu = 0.001
+
+    if (thre == "soft"){
+      for (i in 1:1000){
+        if (bestDet < det(.softThre(covMatrix, niuList[i]))){
+          bestDet = det(.softThre(covMatrix, niuList[i]))
+          bestniu = niuList[i]
+        }
+      }
+      return(solve(.softThre(covMatrix, bestniu)))
+    }
+
+    if (thre == "hard"){
+      for (i in 1:1000){
+        if (.checkInv(.hardThre(covMatrix, niuList[i]))){
+          bestniu = niuList[i]
+          break
+        }
+      }
+      return(solve(.hardThre(covMatrix, bestniu)))
+    }
+}
+
+diffee <- function(C, D, lambda = 0.05, covType = "cov", thre = "soft"){
 
     if (is.data.frame(C)){
       C = as.matrix(C)
@@ -25,23 +45,41 @@ diffee <- function(C, D, lambda = 0.05){
     if (is.data.frame(D)){
       D = as.matrix(D)
     }
+    if (covType == "cov") {
+      if (isSymmetric(C) == FALSE){
+        covX = cov(C)
+      }
+      else{
+        covX = C
+      }
 
-    if (isSymmetric(C) == FALSE){
-      covX = cov(C)
-    }
-    else{
-      covX = C
-    }
-
-    if (isSymmetric(D) == FALSE){
-      covY = cov(D)
-    }
-    else{
-      covY = D
+      if (isSymmetric(D) == FALSE){
+        covY = cov(D)
+      }
+      else{
+        covY = D
+      }
     }
 
-    backX = .backwardMap(covX)
-    backY = .backwardMap(covY)
+    if (covType == "cor") {
+      if (isSymmetric(C) == FALSE){
+        covX = cor.fk(C)
+      }
+      else{
+        covX = C
+      }
+
+      if (isSymmetric(D) == FALSE){
+        covY = cor.fk(D)
+      }
+      else{
+        covY = D
+      }
+    }
+
+
+    backX = .backwardMap(covX, thre)
+    backY = .backwardMap(covY, thre)
     diffNet = .softThre((backY - backX), lambda)
     out = list(diffNet = diffNet)
     class(out) = "diffee"
