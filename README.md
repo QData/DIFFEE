@@ -6,6 +6,7 @@
 
 ```R
 install.packages("diffee")
+library(diffee)
 demo(diffeeDemo)
 ```
 
