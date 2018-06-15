@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1529075197378.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A863D5CB",
+    "lastKnownWriteTime" : 1529087450,
+    "last_content_update" : 1529087450453,
+    "path" : "E:/Github/Papers-sGGM/Zhaoyang/diffee/demo/synthetic.R",
+    "project_path" : "demo/synthetic.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

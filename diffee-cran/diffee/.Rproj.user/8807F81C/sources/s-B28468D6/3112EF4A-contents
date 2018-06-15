@@ -1,0 +1,79 @@
+library(RNifti)
+library(neurobase)
+library(oro.nifti)
+library(brainGraph)
+
+
+library(diffee)
+
+
+## utilities to plot
+.make.adj.matrix <- function(theta, separate=FALSE) {
+  adj = list()
+  if(separate)
+  {
+    adj = (abs(theta) > 1e-5) * 1
+  }
+  if(!separate)
+  {
+    adj = 0*theta
+    adj = adj+(abs(theta) > 1e-5) * 1
+  }
+  return(adj)
+}
+
+
+# modified from plot.simule
+
+plotutil <-
+  function(x, name, type="graph", index=NULL, ...)
+  {
+    .env = "environment: namespace:diffee"
+    #UseMethod("plot")
+    tmp = x$diffNet
+    p = dim(tmp)[1]
+    if (type == "graph"){
+      Graphs = tmp
+    }
+    
+    if (type == "neighbor"){
+      id = matrix(0,p,p)
+      id[index,] = rep(1,p)
+      id[,index] = rep(1,p)
+      for (i in 1:length(tmp)){
+        Graphs = tmp * id
+      }
+    }
+    
+    adj = .make.adj.matrix(Graphs)
+    diag(adj)=0
+    
+    # add names to graph vertexes
+    colnames(adj) <- name
+    rownames(adj) <- name
+    
+    gadj = graph.adjacency(adj,mode="upper",weighted=TRUE,add.colnames = 'name')
+    return (gadj)
+    
+  }
+
+
+
+
+# please load finaldatalist.rds
+# please tune the parameters
+result = diffee(finaldatalist[[1]], finaldatalist[[2]], 0.03)
+
+#please load aal116.rds
+
+dataname = aal116$name
+
+#saveRDS(aal116, "aal116.rds")
+
+sharegraph = plotutil(result, dataname)
+sharegraphmade <- make_brainGraph(sharegraph, atlas = "aal116")
+
+
+
+# type in sharegraphmade
+plot_brainGraph_gui()

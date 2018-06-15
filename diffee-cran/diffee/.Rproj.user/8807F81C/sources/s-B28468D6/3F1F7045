@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1529075231374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3F1F7045",
+    "lastKnownWriteTime" : 1529087743,
+    "last_content_update" : 1529087743800,
+    "path" : "E:/Github/Papers-sGGM/Zhaoyang/diffee/demo/word.R",
+    "project_path" : "demo/word.R",
+    "properties" : {
+        "cursorPosition" : "30,41",
+        "scrollLine" : "4",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
