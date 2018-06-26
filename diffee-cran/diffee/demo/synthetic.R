@@ -31,7 +31,7 @@ readline(prompt="Press [enter] to view comparison between ground truth and gener
               vertex.shape="none",
               vertex.label.color="gray40",
               vertex.label.cex=.7, vertex.frame.color="white", vertex.size = 10 ,
-              edge.color = categorical_pal(3)[1],
+              edge.color = rainbow(1)[1],
               main = "difference graph ground truth")
 }
 

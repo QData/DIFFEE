@@ -4,16 +4,16 @@
     "created" : 1527189045521.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "2|33|5|0|\n7|33|10|0|\n12|50|36|0|\n40|72|88|0|\n94|26|116|2|\n118|11|159|0|\n222|3|233|2|\n238|30|254|2|\n",
+    "folds" : "2|33|5|0|\n7|33|10|0|\n12|50|36|0|\n40|72|88|0|\n",
     "hash" : "0",
     "id" : "D7B74B97",
-    "lastKnownWriteTime" : 1529074946,
-    "last_content_update" : 1529074946003,
-    "path" : "E:/Github/Papers-sGGM/Zhaoyang/diffee/R/diffee.R",
+    "lastKnownWriteTime" : 1530043472,
+    "last_content_update" : 1530043472641,
+    "path" : "E:/Github/DIFFEE/diffee-cran/diffee/R/diffee.R",
     "project_path" : "R/diffee.R",
     "properties" : {
-        "cursorPosition" : "171,26",
-        "scrollLine" : "8"
+        "cursorPosition" : "38,0",
+        "scrollLine" : "0"
     },
     "relative_order" : 1,
     "source_on_save" : false,

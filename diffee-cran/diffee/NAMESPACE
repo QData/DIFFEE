@@ -1,6 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 import("igraph", "pcaPP")
 importFrom("stats", "cov")
-export(diffee, plot.diffee, net.neighbors,net.hubs,net.edges,net.degree)
+export(diffee, plot.diffee)
 S3method(plot,diffee)
 importFrom("graphics", "plot")
