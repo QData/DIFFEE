@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530646055801.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1467218134",
+    "id" : "C71840FC",
+    "lastKnownWriteTime" : 1530642888,
+    "last_content_update" : 1530642888,
+    "path" : "E:/Github/DIFFEE/diffee-cran/diffee/R/diffee-package.R",
+    "project_path" : "R/diffee-package.R",
+    "properties" : {
+        "cursorPosition" : "39,12",
+        "scrollLine" : "12",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

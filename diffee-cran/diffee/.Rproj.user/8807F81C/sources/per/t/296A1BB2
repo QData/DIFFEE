@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530043458235.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "26|26|47|2|\n93|3|117|2|\n120|53|132|0|\n136|3|142|2|\n147|30|163|2|\n",
+    "hash" : "3594823973",
+    "id" : "296A1BB2",
+    "lastKnownWriteTime" : 1530645833,
+    "last_content_update" : 1530645833881,
+    "path" : "E:/Github/DIFFEE/diffee-cran/diffee/R/Plot.R",
+    "project_path" : "R/Plot.R",
+    "properties" : {
+        "cursorPosition" : "14,12",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

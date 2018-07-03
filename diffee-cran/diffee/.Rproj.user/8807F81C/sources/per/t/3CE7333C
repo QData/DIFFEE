@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530645472431.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3937349577",
+    "id" : "3CE7333C",
+    "lastKnownWriteTime" : 1530645481,
+    "last_content_update" : 1530645481040,
+    "path" : "E:/Github/DIFFEE/diffee-cran/diffee/demo/word.R",
+    "project_path" : "demo/word.R",
+    "properties" : {
+        "cursorPosition" : "20,35",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
